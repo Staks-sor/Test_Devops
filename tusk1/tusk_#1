@@ -1,12 +1,12 @@
-def sid_search(IP):
-    with open(r'C:\Users\stass\OneDrive\Documents\Тестовое задание DevOps\log.txt') as read_file:
+def sid_search(ip):
+    with open(r'log.txt') as read_file:
         for search_sid in read_file:
-            IP_s = search_sid.split()[0]
-            if IP == IP_s:
+            ip_s = str(search_sid.split()[0])
+            if ip == ip_s:
                 sid = search_sid.split('sid=/')[1].split('/&type')[0]
                 print(sid)
 
 
 if __name__ == '__main__':
-    IP_search = "10.1.192.38"
-    sid_search(IP_search)
+    ip_search = "10.1.192.38"
+    sid_search(ip_search)
