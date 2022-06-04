@@ -6,7 +6,7 @@ StartLimitBurst=3
 
 [Service]
 Type=simple
-WorkingDirectory=/home/staks/
+WorkingDirectory=папка с jar файлом
 ExecStart=/bin/java -jar ./app.jar ./outlogs.txt "Service is working!"
 Restart=always
 RestartSec=3
