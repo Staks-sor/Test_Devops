@@ -1,0 +1,15 @@
+[Unit]
+Description=testDevOps_tusk#2
+After = syslog.target network.target
+StartLimitIntervalSec=200
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/staks/
+ExecStart=/bin/java -jar ./app.jar ./outlogs.txt "Service is working!"
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
